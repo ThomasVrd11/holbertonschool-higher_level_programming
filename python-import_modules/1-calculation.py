@@ -18,4 +18,3 @@ if __name__ == '__main__':
     if div:
         result = div(a, b)
         print("{} / {} = {}".format(a, b, result))
-        
