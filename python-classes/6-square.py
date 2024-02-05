@@ -1,4 +1,8 @@
+#!/usr/bin/python3
+"""Defines a square."""
+
 class Square:
+    """Represents a square."""
     def __init__(self, size=0, position=(0, 0)):
         """
         Initializes a Square object.
