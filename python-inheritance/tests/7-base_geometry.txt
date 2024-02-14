@@ -1,0 +1,49 @@
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> bg = BaseGeometry()
+
+>>> bg.integer_validator("name", 1)
+
+>>> bg.integer_validator("name", "jon")
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", -1)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
+
+>>> bg.integer_validator("name", 0)
+Traceback (most recent call last):
+ValueError: name must be greater than 0
+
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+>>> bg.integer_validator("name")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+>>> bg.integer_validator("name", (4,))
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", [3])
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", {3, 4})
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.integer_validator("name", None)
+Traceback (most recent call last):
+TypeError: name must be an integer
+
+>>> bg.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
+
+>>> bg.integer_validator("name", True)
+Traceback (most recent call last):
+TypeError: name must be an integer
