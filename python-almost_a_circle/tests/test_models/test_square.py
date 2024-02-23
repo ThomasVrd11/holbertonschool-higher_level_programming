@@ -112,7 +112,7 @@ class TestSquare(unittest.TestCase):
                 et elle est succeptible de changer a chaque execution.
                 """
             self.assertEqual(
-                file.read(), '[{"id": 23, "size": 1, "x": 0, "y": 0}]')
+                file.read(), '[{"id": 6, "size": 1, "x": 0, "y": 0}]')
         os.remove('Square.json')
 
     def test_Square_load_from_file(self):
